@@ -249,10 +249,10 @@ def main():
 
     # 2. 数据根路径（需根据自己的路径调整）
     data_root = os.path.abspath(os.path.join(os.getcwd(), "../.."))
-    img_root = os.path.join(data_root, "data_set", "2RIBENwangHHT")  # 图像数据根路径（与之前一致）
+    img_root = os.path.join(data_root, "data_set", "RIBEN")  # 图像数据根路径（与之前一致）
     # 时序.xlsx文件路径（重点！看下方说明）
-    train_seq_xlsx = os.path.join(data_root, "data_set", "2RIBENwangHHT", "train", "seq_data.xlsx")
-    val_seq_xlsx = os.path.join(data_root, "data_set", "2RIBENwangHHT", "val", "seq_data.xlsx")
+    train_seq_xlsx = os.path.join(data_root, "data_set", "RIBEN", "train", "seq_data.xlsx")
+    val_seq_xlsx = os.path.join(data_root, "data_set", "RIBEN", "val", "seq_data.xlsx")
 
     # 3. 检查文件存在性
     assert os.path.exists(img_root), f"{img_root} path does not exist."
@@ -308,7 +308,7 @@ def main():
     # ---------------------- 训练配置 ----------------------
     epochs = 100
     best_acc = 0.0
-    save_path = './ResNetFCA_GRU_2RIBENwangHHT83.pth'
+    save_path = './FCA-ResNet_GRU.pth'
 
     # ---------------------- 训练循环 ----------------------
     for epoch in range(epochs):
